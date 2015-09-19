@@ -6,6 +6,7 @@ import scoverage.ScoverageKeys.coverageExcludedPackages
 parallelExecution in ThisBuild := false
 
 fork := true
+javaOptions in test += "-Xmx3072M -XX:MaxPermSize=1024M -XX:MaxPermSize=512m -XX:ReservedCodeCacheSize=192m"
 
 lazy val buildSettings = Seq(
   version := "2.0.1-SNAPSHOT",
